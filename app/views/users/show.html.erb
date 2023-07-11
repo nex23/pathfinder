@@ -33,6 +33,16 @@
         </div>
       </div>
 <div class= "container shadow w-50 rounded-4 p-5 mb-5 text-center">
+<h3><%= @usuario.first_name %> <%= @usuario.last_name %>, <%= @usuario.age %></h3>
+ <%= image_tag @usuario.photo.url(crop: "fill", width: 200, height: 200), class:" mb-5 mx-auto rounded-circle" %>
+ <p> Pais: <%= @usuario.country %></p>
+ <p> Conocimientos: <%= @usuario.knowledges %></p>
+ <p> Universidad: <%= @usuario.college %></p>
+<%= link_to "Editar perfil", edit_user_registration_path(@usuario), class: "btn btn-secondary" if current_user.id == @usuario.id %>
+
+
+
+
       <% else %>
         <h2>Hola <%= current_user.first_name %>, estás viendo el perfil de <%= @usuario.first_name %> <%= @usuario.last_name %></h2>
      <% end %>
