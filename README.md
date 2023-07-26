@@ -1,5 +1,5 @@
 <h1 align="center"> Pathfinder </h1>
-![Pathfinder](https://github.com/nex23/pathfinder/assets/2569577/c78da0d1-dd25-4bfc-8b76-553adb6353b6)
+![Pathfinder](https://github.com/nex23/pathfinder/blob/master/app/assets/images/logocompleto.png)
 
 Pathfinder is a platform that allows direct connection between companies that request or are open to receiving internships, and recent graduates or senior students, who need work experience that opens the path to a job.
 
