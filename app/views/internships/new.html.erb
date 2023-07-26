@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-6 p-5 pb-0 mb-5">
+    <div class="col-6 p-5 pb-0 mb-5 mx-auto">
       <div class="my-card-su shadow radios">
         <%= image_tag("logologin.png", alt: "Logo aplicacion", class:"my-logo") %>
         <% if current_user.role == true %>
         <h2>Crea una pasantía!</h2>
         <%= simple_form_for(@internship) do |f| %>
-        <div class="form-inputs">
-          <%= f.input :title, label: "Puesto", required: true, placeholder: "Ejemplo: Desarrollador Frontend"%>
-          <%= f.input :description, label: "Descripción", required: true, placeholder: "Escribe en que consiste tu pasantía" %>
-          <%= f.input :category, collection: Internship.categories.keys.map { |key| [Internship.categories[key], key] }, label: "Categoría", prompt: "Categoría", required: true %>
-          <%= f.input :duration, label: "Duración (en meses)", collection: 1..12, required: true, prompt: "Seleccionar cantidad de meses" %>
+          <div class="form-inputs">
+            <%= f.input :title, label: "Puesto", required: true, placeholder: "Ejemplo: Desarrollador Frontend"%>
+            <%= f.input :description, label: "Descripción", required: true, placeholder: "Escribe en que consiste tu pasantía" %>
+            <%= f.input :category, collection: Internship.categories.keys.map { |key| [Internship.categories[key], key] }, label: "Categoría", prompt: "Categoría", required: true %>
+            <%= f.input :duration, label: "Duración (en meses)", collection: 1..12, required: true, prompt: "Seleccionar cantidad de meses" %>
 
           <div>
             <div class="row">
@@ -18,7 +18,7 @@
               <%= f.input :country, label: "País", only: ['AR', 'BR', 'CL', 'CO', 'MX', 'PE', 'UY', 'EC', 'BO', 'PY', 'VE', 'TT', 'DO', 'PA', 'NI', 'HN', 'GT', 'SV', 'DM', 'CU', 'CR', "US", "CA"],
                           required: false,
                           input_html: { autocomplete: "country"}%>
-          </div>
+              </div>
 
 
 
@@ -66,13 +66,16 @@
         <% end %>
       </div>
     </div>
-    <div class="col-6 col-with-bg mt-5">
+  <div class="col-6 col-with-bg mt-5">
     <%= image_tag("fotolapiz.png", alt: "Chicos usando PathFinder", width:600) %>
 
-        <% else %>
-
-        <h2>Tu tipo de perfil no permite esta acción, si tienes una empresa y quieres publicar oportunidades de pasantías por favor registrate con otro email y selecciona "Empresa" al momento de crear la cuenta.</h2>
-        <% end %>
-    </div>
   </div>
 </div>
+        <% else %>
+
+        <h2 class="text-center">El url que has ingresado no es valido</h2>
+        <% end %>
+      </div>
+    </div>
+  </div>
+ </div>
